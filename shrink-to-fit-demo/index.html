@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <style>
+      .content {
+        width: 1200px;
+        border: 3px solid powderblue;
+      }
+      .grown {
+        width: 1300px;
+        border-color: gold;
+      }
+      .enlarged {
+        width: 1400px;
+        border-color: rebeccapurple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content" id="content">
+      width: 1200px
+    </div>
+    <button id="enlargeButton">click to enlarge</button>
+    <script>
+      setTimeout(() => {
+        document.getElementById('content').classList.add('grown');
+      }, 2000)
+      document.getElementById('enlargeButton').onclick=() => {
+        document.getElementById('content').classList.add('enlarged')
+      }
+    </script>
+  </body>
+</html>
